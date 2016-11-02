@@ -1,12 +1,12 @@
 {
-  "name": "gulp-pug-sass-starter",
-  "version": "0.2.0",
-  "description": "A Pug and Sass starter project using gulp for task automation.",
+  "name": "Fashion Tech Hackathon 2017 Website",
+  "version": "0.1.0",
+  "description": "Website for the 2017 Fashion Tech Hackathon attendee website. Taking place at Kent State University on January 27-29th",
   "main": "gulpfile.js",
   "author": {
-    "name": "Joshua Azemoh",
-    "email": "buzzme46@gmail.com",
-    "url": "https://github.com/azemoh"
+    "name": "Nicholas Crawford",
+    "email": "ncrawfo7@kent.edu",
+    "url": "https://github.com/NickCrawford"
   },
   "scripts": {
     "start": "gulp",
