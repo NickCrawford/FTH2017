@@ -1,11 +1,17 @@
-$(function() {
-  var numContentPanels = 5;
+$(document).ready(function() {
+$('#logo').fadeIn(300);
+
+var numContentPanels = 5;
 
 checkScrollPosition(0);
 
 $(window).scroll(function(event) {
   var st = $(this).scrollTop();
   checkScrollPosition(st);
+});
+
+$("#logo").click(function() {
+
 });
 
 function checkScrollPosition(scrollTop) {
@@ -36,7 +42,7 @@ function checkScrollPosition(scrollTop) {
     
     //Animate content with scrolling
     $('.fabric.about').rotate(45 - scrollTop / 15);
-    $('#about .content').float( - (scrollTop / 15));
+    $('#about .content').float( - (scrollTop / 15.0));
     
   }
   
@@ -48,7 +54,7 @@ function checkScrollPosition(scrollTop) {
     
     //Animate content with scrolling
     $('.fabric.sponsor').rotate(30 + scrollTop  / 5);
-    $('#sponsor .content').float( - (scrollTop  / 15));
+    $('#sponsor .content').float( - (scrollTop / 15.0) + (windowHeight / 15.0));
   }
 }
 
