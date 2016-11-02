@@ -1,0 +1,187 @@
+$panel-colors: $turquoise,$blue,$green,$light-green,$light-blue,$blue-green;
+$panel-1-color: ();
+$panel-3-color: ();
+
+#panel-wrapper {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.fabric {
+  position: absolute;
+  
+  -webkit-transition: bottom 1s ease, left 1s ease;
+  transition: bottom 1s ease, left 1s ease;
+  
+  &.away {
+    -webkit-transition: bottom 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s, left 0.75s linear 0.5s;
+  transition: bottom 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s,  left 0.75s linear 0.5s;
+  } 
+
+}
+
+.fabric.about {
+  bottom: -200%;
+  left: -15%;
+  
+  &.away {
+    bottom: -30%;
+    left: -10%;
+  }
+ 
+  width: 60vw;
+  height: 40vw;
+  
+  max-width: 400px;
+  max-height: 400px;
+
+  background-color: $green;
+
+}
+
+.fabric.sponsor {
+  bottom: -100%;
+  left: 25%;
+  
+  &.away {
+    bottom: -10%;
+    left: 25%;
+  }
+  
+  max-width: 200px;
+  max-height: 200px;
+  
+  width: 20vw;
+  height: 20vw;
+
+  background-color: $indigo;
+}
+
+@for $i from 1 through length($panel-colors) {
+  .panel_#{$i} {
+    position: absolute;
+    //left: (tan(sin($i * pi()/4) - cos($i * pi()/4))) + vw;
+    //top: (tan(sin($i * pi()/4) + cos($i * pi()/4))) + vh;
+    min-width: 500px;
+    min-height: 500px;
+    width: (60 + (random(30) - 15)) + vw;
+    height: (50 + (random(40) - 20)) + vw;
+    z-index: random(6);
+    $color-index: random(length($panel-colors));
+    background-color: nth($panel-colors, $color-index);
+    $panel-1-color: if($i==1, nth($panel-colors, $color-index), $panel-1-color);
+    $panel-3-color: if($i==3, nth($panel-colors, $color-index), $panel-3-color);
+    //@debug '$i:'+$i+'   $color-index:'+$color-index+'      nth($panel-colors, $color-index ):' + nth($panel-colors, $color-index )+'     length:'+length($panel-colors);
+    $panel-colors: (remove-nth($panel-colors, $color-index));
+    //Remove the color we just used from the list so we dont use it again.
+    transform: translate(-50%, -50%) rotate(45deg); //skewX((random(3) * 15) + deg);
+    transition: left 0.75s ease-in-out, top 0.75s ease-in-out, transform 0.75s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    &.away {
+      transition: left 0.75s ease-in-out, top 0.75s ease-in-out, transform 0.75s ease-in-out;
+      -webkit-transition-delay: 0.25s;
+      transition-delay: 0.25s;
+    }
+  }
+}
+
+%half {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 0;
+  transition: left 0.75s ease-in-out, right 0.75s ease-in-out;
+  -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+  &.away {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+}
+
+.half_l {
+  @extend %half;
+  left: 0;
+  background-color: $panel-3-color;
+  @debug "half-l-color" + $panel-3-color;
+  &.away {
+    left: -100%;
+  }
+}
+
+.half_r {
+  @extend %half;
+  right: 0;
+  background-color: $panel-1-color;
+  @debug "half-r-color" + $panel-1-color;
+  &.away {
+    right: -100%;
+  }
+}
+
+.panel_1 {
+  left: 0;
+  top: 0;
+  transform-origin: top left;
+  &.away {
+    left: -100%;
+    top: -100%;
+    transform: translate(-50%, -50%) rotate(-0deg);
+  }
+}
+
+.panel_2 {
+  left: 50%;
+  top: 25%;
+  &.away {
+    top: -250%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.panel_3 {
+  left: 100%;
+  top: 0;
+  transform-origin: top right;
+  &.away {
+    left: 200%;
+    top: -100%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+
+.panel_4 {
+  left: 25%;
+  top: 75%;
+  &.away {
+    left: -100%;
+    top: 200%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+
+.panel_5 {
+  left: 75%;
+  top: 100%;
+  &.away {
+    left: 75%;
+    top: 300%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.panel_6 {
+  left: 100%;
+  top: 50%;
+  &.away {
+    left: 200%;
+    top: 150%;
+  }
+}

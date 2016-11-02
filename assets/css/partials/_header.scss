@@ -1,0 +1,114 @@
+header {
+  position: fixed;
+  padding: 0 7%;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 110;
+  
+  box-sizing: border-box;
+  
+  nav {
+    width: 100%;
+    max-width: 960px;
+    height: 10vh;
+    
+    margin: 0  auto;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    
+    .nav-item {
+      cursor: hand;
+      cursor: pointer;
+      
+      padding-right: 70px;
+      
+      font-size: 1.5em;
+      margin: 0;
+      line-height: 10vh;
+        
+      white-space: nowrap;
+      
+      text-align: left;
+      transition: transform 0.5s ease-out;
+      
+      @for $i from 1 through 4 {
+         &:nth-child(#{$i}) { 
+           -webkit-transition-delay: (0.5 + (0.1s * $i));
+           -moz-transition-delay: (0.5 + (0.1s * $i));
+           transition-delay: (0.5 + (0.1s * $i));
+         }
+      }
+      
+      &.hidden {
+        transform: translateY(-100%);
+        
+        @for $i from -4 through -1 {
+          &:nth-child(#{abs($i)}) { 
+           -webkit-transition-delay: (0.1s * (3 - abs($i)));
+           -moz-transition-delay: (0.1s * (3 - abs($i)));
+           transition-delay: (0.1s * (3 - abs($i)));
+         }
+      }
+      }
+    }
+  }
+}
+
+#logo {
+  margin: 0.75vh;
+  position: absolute;
+  right: 50%;
+  top: 40%;
+  background-color: white;
+  width: 40vw;
+  height: 40vw;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 100%;
+  transform: translate(50%, -50%);
+  transition: right 0.5s ease-in-out, top 0.5s ease-in-out, width 0.5s linear, height 0.5s linear, transform 0.5s ease-in-out, min-width 0.5s linear, min-height 0.5s linear;
+  transition-delay: 0s;
+  &.away {
+    top: 0;
+    right: 0;
+    min-width: 60px;
+    min-height: 60px;
+    width: 14vh;
+    height: 14vh;
+    transition-delay: 0.3s;
+    transform: translate(0%, 0%);
+  }
+}
+
+#date {
+  width: 100%;
+  font-size: 3em;
+  font-weight: 200;
+  color: $black;
+  position: absolute;
+  left: 0;
+  bottom: 10vh;
+  text-align: center;
+  
+  z-index: 10;
+  
+  -webkit-transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  
+  &.away {
+    bottom: -50%;
+    
+    -webkit-transition: bottom 0.5s ease 0.25s;
+  transition: bottom 0.5s ease 0.25s;
+  }
+}

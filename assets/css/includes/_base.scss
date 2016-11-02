@@ -1,0 +1,61 @@
+/*	FONTS
+------------------------*/
+//@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+
+/*	Colors
+–––––––––––––––––––––––––––*/
+$black: #231F20;
+$grey: #939598;
+$turquoise: #8BD2CF;
+$blue: #2B8ECE;
+$light-blue: #EBF6F5;
+$blue-green: #8ccbc2;
+$green: #DEE682;
+$light-green: #EFF3C8;
+$indigo: #003876;
+
+
+
+/*	TYPOGRAPHY
+–––––––––––––––––––––––––––*/
+* {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 1.5;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+
+	color: $black;
+	transition: color 0.3s linear;
+	&:hover {
+		color: $green;
+
+	}
+}
+
+
+/* ------ Normalize ----- */
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
