@@ -40,7 +40,7 @@ function checkScrollPosition(scrollTop) {
     
   }
   
-  if (scrollTop > windowHeight && scrollTop <= windowHeight * 2) {
+  if (scrollTop > windowHeight) {
     //Content sponsor
     $('#about').addClass('hidden');
     $('#sponsor').removeClass('hidden');
@@ -48,8 +48,7 @@ function checkScrollPosition(scrollTop) {
     
     //Animate content with scrolling
     $('.fabric.sponsor').rotate(30 + scrollTop  / 5);
-    $('#sponsor .content').float( - (scrollTop % (windowHeight+1)  / 15));
-    //$('.fabric.about').rotate(0 - scrollTop % (windowHeight + 1)  / 15);
+    $('#sponsor .content').float( - (scrollTop  / 15));
   }
 }
 
@@ -91,6 +90,8 @@ jQuery.fn.float = function(amount) {
         case '#sponsor': scrollTo(windowHeight + 1);
         break;
         case '#faq': scrollTo(windowHeight*2 + 1);
+        break;
+        case '#contact': scrollTo(windowHeight*3 + 1);
         break;
       }
 
