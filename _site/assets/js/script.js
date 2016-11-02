@@ -13,12 +13,47 @@ $(document).ready(function() {
     // Handle Logo clicks
     $("#logo").click(function() {
         var scrollTop = $(window).scrollTop();
+
         if (scrollTop <= 0) {
             scrollTo(1, 0);
+            pokeElement(this);
         } else {
             scrollTo(0, 0);
         }
     });
+
+    // Check if user is stuck on landing screen
+    function landingScreenPrompt(zeroCount) {
+        setTimeout(function() {
+            var scrollTop = $(window).scrollTop();
+
+            if (scrollTop == 0) {
+                zeroCount += 1;
+            } else {
+                zeroCount = 0;
+            }
+
+            if (!$('#logo').hasClass('away')) {
+
+                if (zeroCount == 6) {
+                    pokeElement('#logo');
+                }
+
+                if (zeroCount % 16 == 0) {
+                    pokeElement('#logo');
+                }
+
+                if (zeroCount == 60) {
+                    scrollTo(1,0);
+                }
+            }
+
+            landingScreenPrompt(zeroCount);
+        }, 500);
+    }
+
+    //Start checking if user on landing screen
+    landingScreenPrompt(0);
 
     function checkScrollPosition(scrollTop) {
         var windowHeight = window.innerHeight;
@@ -116,6 +151,14 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: top
         }, speed);
+    }
+
+    //Adds the poke animation to an element
+    function pokeElement(element) {
+        $(element).addClass('poke');
+        setTimeout(function() {
+            $(element).removeClass('poke')
+        }, 1000);
     }
 
 });//End
