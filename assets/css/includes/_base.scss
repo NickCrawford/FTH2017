@@ -47,15 +47,45 @@ a {
 	text-decoration: none;
 
 	color: $black;
-	transition: color 0.3s linear;
+	transition: color 0.25s ease;
 	
 	&:hover {
-		color: $turquoise;
+		color: $grey;
+		transition: color 0.25s ease;
 
 	}
 
 	&.btn {
-		border: 2px dashed $light-blue;
+		color: white;
+		position: relative;
+		top: 20px;
+		left: 0;
+		padding: 20px 40px;
+		font-size: 1.2em;
+		line-height: 2;
+		border: 2px dashed $indigo;
+		border-radius: 5px;
+
+		&:after {
+			content: '';
+			display: inline-block;
+
+			position: absolute;
+			top: 5%;
+			left: 1%;
+			right: 1%;
+			bottom: 5%;
+			width: 98%;
+
+			border-radius: 3px;
+
+			z-index: -1;
+			background-color: $indigo;
+		}
+
+		&:hover {
+			color: $light-blue;
+		}
 	}
 }
 
