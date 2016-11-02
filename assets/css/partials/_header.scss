@@ -63,21 +63,28 @@ header {
 }
 
 #logo {
-  margin: 0.75vh;
+  display: none;
+
   position: absolute;
   right: 50%;
   top: 40%;
   background-color: white;
+  
   width: 40vw;
   height: 40vw;
   min-width: 250px;
   min-height: 250px;
   max-width: 400px;
   max-height: 400px;
+
   border-radius: 100%;
+  margin: 0.75vh;
+
   transform: translate(50%, -50%);
   transition: right 0.5s ease-in-out, top 0.5s ease-in-out, width 0.5s linear, height 0.5s linear, transform 0.5s ease-in-out, min-width 0.5s linear, min-height 0.5s linear;
   transition-delay: 0s;
+
+  cursor: pointer;
   &.away {
     top: 0;
     right: 0;
