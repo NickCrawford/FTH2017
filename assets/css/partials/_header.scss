@@ -94,33 +94,28 @@ header {
 
   &.away {
     top: 0;
-    right: 0;
+    right: 5%;
     min-width: 60px;
     min-height: 60px;
     width: 14vh;
     height: 14vh;
-    transition-delay: 0.25s;
-    transform: translate(0%, 0%);
-
-    &.poke {
-      transition-delay: 0s;
-      transform: translate(50%, 0%);
-    }
+    transition-delay: 0.3s;
+    transform: translate(50%, 0%);
   }
 
   &.poke {
-    animation: poke 1.0s ease;
+    animation: poke 1s ease;
   }
 }
 
 @-webkit-keyframes poke {
-  0%, 30%, 60%, 80%, 100% {
+  0%, 30%, 50%, 80%, 100% {
     transform: translate(50%, 0%);
   }
   20% {
     transform: translate(50%, -30px);
   }
-  40% {
+  60% {
     transform: translate(50%, -15px);
   }
 }
@@ -133,7 +128,7 @@ header {
   color: $black;
   position: absolute;
   left: 0;
-  bottom: 10vh;
+  bottom: 15vh;
   text-align: center;
   text-transform: none;
   

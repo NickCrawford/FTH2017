@@ -20,6 +20,7 @@ body {
   height: 100vh;
   overflow: hidden;
   z-index: 90;
+  opacity: 0.99;
 }
 
 .content-container {
@@ -41,8 +42,8 @@ body {
   margin-top: 24vh;
   text-align: left;
   overflow: scroll;
-  opacity: .99;
-  z-index: 200;
+
+  z-index: 250;
 }
 
 #about {

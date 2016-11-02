@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#logo').fadeIn(300);
 
-    var numContentPanels = 5;
+    var numContentPanels = 3;
 
     checkScrollPosition(0);
 
