@@ -62,41 +62,40 @@ $(document).ready(function() {
             //Landing Content
             $('#panel-wrapper').children().removeClass('away');
             $('#logo').removeClass('away');
-            $('#about').addClass('hidden');
+            $('.about').addClass('hidden');
             $('nav').children().addClass('hidden');
-
+            //$('header').css({'z-index': '999'});
         }
 
         if (scrollTop > 0) {
             //Content about  
-
+            //$('header').css({'z-index': '110'});
             //Remove Landing Page items
             $('#panel-wrapper').children().addClass('away');
             $('#logo').addClass('away');
             $('nav').children().removeClass('hidden');
 
             //Unhide Page about content
-            $('#about').removeClass('hidden');
+            $('.about').removeClass('hidden');
 
             //hide page 2
-            $('#sponsor').addClass('hidden');
-            $('.fabric.sponsor').removeClass('away');
+            $('.sponsor').addClass('hidden');
+            $('.fabric.two').removeClass('away');
 
             //Animate content with scrolling
-            $('.fabric.about').rotate(45 - scrollTop / 15);
-            $('#about .content').float( - (scrollTop / 15.0));
-
+            $('.fabric.one').rotate(45 - scrollTop / 15);
+            $('.about .content').float( - (scrollTop / 15.0));
         }
 
         if (scrollTop > windowHeight) {
             //Content sponsor
-            $('#about').addClass('hidden');
-            $('#sponsor').removeClass('hidden');
-            $('.fabric.sponsor').addClass('away');
+            $('.about').addClass('hidden');
+            $('.sponsor').removeClass('hidden');
+            $('.fabric.two').addClass('away');
 
             //Animate content with scrolling
-            $('.fabric.sponsor').rotate(30 + scrollTop  / 5);
-            $('#sponsor .content').float( - (scrollTop / 15.0) + (windowHeight / 15.0));
+            $('.fabric.two').rotate(30 + scrollTop  / 5);
+            //$('.sponsor .content').float( - (scrollTop / 15.0) + (windowHeight*2 / 15.0));
         }
     }
 

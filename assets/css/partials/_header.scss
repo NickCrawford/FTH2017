@@ -1,12 +1,11 @@
 header {
-  position: fixed;
+  position: absolute;
   padding: 0 7%;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100vw;
-  height: 100vh;
   overflow: hidden;
-  z-index: 110;
+  z-index: 200;
   
   box-sizing: border-box;
   
@@ -91,6 +90,8 @@ header {
   transition-delay: 0s;
 
   cursor: pointer;
+
+  z-index:200;
 
   &.away {
     top: 0;

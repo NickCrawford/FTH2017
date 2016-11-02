@@ -4,13 +4,18 @@ block head_end
 	link(rel="stylesheet" href="assets/css/style.css") 
 
 block content
-	#content-wrapper
-		include _partials/about
-		include _partials/sponsor
-		include _partials/faq
-		
-	include _partials/header
-	include _partials/panels
+	#fixed-container
+		#content-backgrounds
+			.about.content-container.hidden
+			.sponsor.content-container.hidden
+
+		include _partials/header
+		include _partials/panels
+
+		#content-wrapper
+			include _partials/about
+			include _partials/sponsor
+			include _partials/faq
 
 	
 
