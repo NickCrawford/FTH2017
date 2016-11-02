@@ -81,3 +81,5 @@ gulp.task('watch', function () {
  * files for changes
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+gulp.task('build', ['pug', 'sass']);
