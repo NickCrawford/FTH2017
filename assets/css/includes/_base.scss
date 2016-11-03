@@ -31,32 +31,120 @@ html {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 1.75em;
 	line-height: 1.5;
 	font-style: italic;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.25em;
+	line-height: 1.2;
+	font-style: none;
+	margin-bottom: 7px
 }
 
 p {
-	font-size: 1.2em;
-	line-height: 2;
+	font-size: 1em;
+	line-height: 1.5;
+	margin-bottom: 1em;
 }
 
 a {
 	text-decoration: none;
 
 	color: $black;
-	transition: color 0.3s linear;
+	transition: color 0.25s ease;
+	
 	&:hover {
-		color: $green;
+		color: $grey;
+		transition: color 0.25s ease;
 
+	}
+
+	&.btn {
+		color: white;
+		position: relative;
+		top: 20px;
+		left: 0;
+		width: 100%;
+		max-width: 350px;
+		padding: 10px 20px;
+		font-size: 1em;
+		line-height: 2;
+		text-align: center;
+
+		border: 2px dashed $indigo;
+		border-radius: 5px;
+
+		z-index: 10;
+
+		&:after {
+			content: '';
+			display: inline-block;
+
+			position: absolute;
+			top: 5%;
+			left: 1%;
+			right: 1%;
+			bottom: 5%;
+			width: 98%;
+
+			border-radius: 3px;
+
+			z-index: -1;
+			background-color: $indigo;
+		}
+
+		&:hover {
+			color: $light-blue;
+		}
 	}
 }
 
+@media(min-width: 480px) {
+	h1 {
+		font-size: 2.5em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		margin-bottom: 10px
+	}
+
+	p {
+		font-size: 1.2em;
+	}
+
+	a.btn {
+
+		width: auto;
+		padding: 20px 40px;
+		font-size: 1.2em;
+	}
+}
 
 /* ------ Normalize ----- */
 *,
 *:after,
 *:before {
 	box-sizing: border-box;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+	flex-wrap: wrap;
+
+	//justify-content: space-between;
+	.half-col {
+		margin-bottom: 20px;
+		margin-right: 20px;
+		flex: 1 0 calc(50% - 20px);
+	}
 }
 

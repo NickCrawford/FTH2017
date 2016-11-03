@@ -1,12 +1,11 @@
 header {
-  position: fixed;
+  position: absolute;
   padding: 0 7%;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100vw;
-  height: 100vh;
   overflow: hidden;
-  z-index: 110;
+  z-index: 200;
   
   box-sizing: border-box;
   
@@ -28,9 +27,9 @@ header {
       cursor: hand;
       cursor: pointer;
 
-      padding-right: 70px;
+      padding-right: 6vw;
       
-      font-size: 1.5em;
+      font-size: 1.2em;
       margin: 0;
       line-height: 10vh;
         
@@ -63,30 +62,66 @@ header {
 }
 
 #logo {
-  margin: 0.75vh;
+  display: none;
+
   position: absolute;
   right: 50%;
-  top: 40%;
+  top: 15vh;
   background-color: white;
-  width: 40vw;
-  height: 40vw;
+  
+  width: 40vh;
+  height: 40vh;
   min-width: 250px;
   min-height: 250px;
   max-width: 400px;
   max-height: 400px;
+
   border-radius: 100%;
-  transform: translate(50%, -50%);
-  transition: right 0.5s ease-in-out, top 0.5s ease-in-out, width 0.5s linear, height 0.5s linear, transform 0.5s ease-in-out, min-width 0.5s linear, min-height 0.5s linear;
+  margin: 0.75vh;
+
+  transform: translate(50%, 0%);
+  transition: 
+  right 0.5s ease-in-out, 
+  top 0.5s ease-in-out, 
+  width 0.5s linear, 
+  height 0.5s linear, 
+  min-width 0.5s linear, 
+  min-height 0.5s linear,
+  max-width 0.5s linear, 
+  max-height 0.5s linear,
+  transform 0.5s ease-in-out;
+
   transition-delay: 0s;
+
+  cursor: pointer;
+
+  z-index:200;
+
   &.away {
     top: 0;
-    right: 0;
+    right: 5%;
     min-width: 60px;
     min-height: 60px;
     width: 14vh;
     height: 14vh;
     transition-delay: 0.3s;
-    transform: translate(0%, 0%);
+    transform: translate(50%, 0%);
+  }
+
+  &.poke {
+    animation: poke 1s ease;
+  }
+}
+
+@-webkit-keyframes poke {
+  0%, 30%, 50%, 80%, 100% {
+    transform: translate(50%, 0%);
+  }
+  20% {
+    transform: translate(50%, -30px);
+  }
+  60% {
+    transform: translate(50%, -15px);
   }
 }
 
@@ -97,11 +132,12 @@ header {
   font-style: normal;
   color: $black;
   position: absolute;
+  bottom: 10vw;
   left: 0;
-  bottom: 10vh;
   text-align: center;
+  text-transform: none;
   
-  z-index: 10;
+  z-index: 190;
   
   -webkit-transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
   transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
@@ -111,5 +147,17 @@ header {
     
     -webkit-transition: bottom 0.5s ease 0.25s;
   transition: bottom 0.5s ease 0.25s;
+  }
+}
+
+@media (max-height: 640px) {
+  #logo {
+    top: 5vh;
+    min-width: 200px;
+    min-height: 200px;
+  }
+
+  #date {
+    bottom: 5vh;
   }
 }
