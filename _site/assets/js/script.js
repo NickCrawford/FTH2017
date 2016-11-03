@@ -1,3 +1,9 @@
+/*  
+    github.com/NickCrawford
+    
+    Get ready for some jQuery! :)
+*/
+
 $(document).ready(function() {
     $('#logo').fadeIn(300);
 
