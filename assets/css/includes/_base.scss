@@ -38,9 +38,10 @@ h1 {
 }
 
 h2 {
-	font-size: 1.5em;
-	line-height: 1;
+	font-size: 1.25em;
+	line-height: 1.2;
 	font-style: none;
+	margin-bottom: 7px
 }
 
 p {
@@ -106,6 +107,11 @@ a {
 		font-size: 2.5em;
 	}
 
+	h2 {
+		font-size: 1.5em;
+		margin-bottom: 10px
+	}
+
 	p {
 		font-size: 1.2em;
 	}
@@ -128,5 +134,17 @@ a {
 .flex-col {
 	display: flex;
 	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+	flex-wrap: wrap;
+
+	//justify-content: space-between;
+	.half-col {
+		margin-bottom: 20px;
+		margin-right: 20px;
+		flex: 1 0 calc(50% - 20px);
+	}
 }
 
