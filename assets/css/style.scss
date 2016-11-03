@@ -48,7 +48,7 @@ body {
 }
 
 .content {
-  padding: 0 7%;
+  padding: 18vh 7% 3vh 7%;
   width: 100%;
   height: 100vh;
 
@@ -60,12 +60,19 @@ body {
 
   max-width: 960px;
   margin: 0 auto;
-  margin-top: 24vh;
+  margin-top: 0;
   text-align: left;
-  overflow: scroll;
+  
 
   z-index: 250;
 }
+
+.scroll-box {
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+
 
 .about {
   &.content-container {
@@ -114,6 +121,31 @@ body {
   }
 }
 
+.faq {
+  &.content-container {
+    background-color: $turquoise;
+    -webkit-clip-path: polygon(90% 15%, 100% 15%, 100% 100%, 0 100%, 0 10%, 60% 10%);
+    clip-path: polygon(90% 15%, 100% 15%, 100% 100%, 0 100%, 0 10%, 60% 10%);
+  }
+
+  transition: transform 0.75s ease-in-out;
+  transform: translate(0%) rotate(0deg);
+  transform-origin: bottom right;
+  
+  &.hidden {
+    transform: translate(50%, 100%) rotate(-45deg);
+  }
+  
+  .content {
+    h1 {
+      color: $blue;
+    }
+
+    p {
+      color: $black;
+    }
+  }
+}
 
 
 .about, .sponsor, .faq {
@@ -121,6 +153,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
+}
+
+@media (min-width: 480px) {
+  .content {
+    padding-top: 24vh;
+  }
 }
 
 @media screen and (min-width: 960px) {

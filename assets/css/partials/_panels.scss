@@ -31,7 +31,7 @@ $panel-3-color: ();
   left: -15%;
   
   &.away {
-    bottom: -30%;
+    bottom: -25vw;
     left: -10%;
   }
  
@@ -61,6 +61,24 @@ $panel-3-color: ();
   height: 20vw;
 
   background-color: $indigo;
+}
+
+.fabric.three {
+  bottom: -100%;
+  left: 48%;
+  
+  &.away {
+    bottom: -10%;
+    left: 48%;
+  }
+  
+  max-width: 150px;
+  max-height: 150px;
+  
+  width: 15vw;
+  height: 15vw;
+
+  background-color: $light-blue;
 }
 
 @for $i from 1 through length($panel-colors) {

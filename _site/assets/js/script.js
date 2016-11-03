@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $('#logo').fadeIn(300);
 
-    var numContentPanels = 3;
+    var numContentPanels = 4;
+    var windowWidth = $(window).innerWidth();
 
     checkScrollPosition(0);
 
@@ -62,9 +63,13 @@ $(document).ready(function() {
             //Landing Content
             $('#panel-wrapper').children().removeClass('away');
             $('#logo').removeClass('away');
-            $('.about').addClass('hidden');
+            $('#date').removeClass('away');
+
             $('nav').children().addClass('hidden');
-            //$('header').css({'z-index': '999'});
+            
+            hidePageOne();
+            hidePageTwo();
+            hidePageThree();
         }
 
         if (scrollTop > 0) {
@@ -73,14 +78,14 @@ $(document).ready(function() {
             //Remove Landing Page items
             $('#panel-wrapper').children().addClass('away');
             $('#logo').addClass('away');
+            $('#date').addClass('away');
             $('nav').children().removeClass('hidden');
 
             //Unhide Page about content
             $('.about').removeClass('hidden');
 
-            //hide page 2
-            $('.sponsor').addClass('hidden');
-            $('.fabric.two').removeClass('away');
+            hidePageTwo();
+            hidePageThree();
 
             //Animate content with scrolling
             $('.fabric.one').rotate(45 - scrollTop / 15);
@@ -89,23 +94,53 @@ $(document).ready(function() {
 
         if (scrollTop > windowHeight) {
             //Content sponsor
-            $('.about').addClass('hidden');
             $('.sponsor').removeClass('hidden');
             $('.fabric.two').addClass('away');
 
             //Animate content with scrolling
             $('.fabric.two').rotate(30 + scrollTop  / 5);
-            //$('.sponsor .content').float( - (scrollTop / 15.0) + (windowHeight*2 / 15.0));
+            $('.sponsor .content').float( - (scrollTop / 15.0) + (windowHeight*2 / 15.0));
+
+            hidePageOne();
+            hidePageThree();
         }
+
+        if (scrollTop > windowHeight * 2) {
+            //Content sponsor
+            $('.sponsor').addClass('hidden');
+            $('.faq').removeClass('hidden');
+            $('.fabric.three').addClass('away');
+
+            //Animate content with scrolling
+            $('.fabric.three').rotate(45 - scrollTop  / 3);
+            $('.faq .content').float( - (scrollTop / 15.0) + (windowHeight*2 / 15.0));
+        }
+    }
+
+    function hidePageOne() {
+        $('.about').addClass('hidden');
+    }
+
+    function hidePageTwo() {
+        //hide page 2
+        $('.sponsor').addClass('hidden');
+        $('.fabric.two').removeClass('away');
+    }
+
+    function hidePageThree() {
+        //hide page 3
+        $('.faq').addClass('hidden');
+        $('.fabric.three').removeClass('away');
     }
 
     //Resize window and body height
     $(window).resize(function() {
         resizeBody();
+        windowWidth = $(window).innerWidth();
     });
 
     function resizeBody() {
-        console.log("resize"); $('body').innerHeight(window.innerHeight * numContentPanels);
+        $('body').innerHeight(window.innerHeight * numContentPanels);
     }
 
     resizeBody();
@@ -119,14 +154,22 @@ $(document).ready(function() {
     };
 
     jQuery.fn.float = function(amount) {
-        $(this).css({'transform' : 'translateY('+amount+'px)'});
+        //Disable on mobile
+        if (windowWidth < 960) {
+            $(this).css({'transform' : 'translateY(0)'});
+        } else {
+            $(this).css({'transform' : 'translateY('+amount+'px)'});
+        }
+        
 
         return $(this);
     }
 
     //Handle Internal Links
     $('.nav-item a').click(function(event){
-        event.preventDefault();
+        if (event.target.hash) {
+            event.preventDefault();
+        }
 
         var windowHeight = window.innerHeight;
         var section = event.target.hash;
