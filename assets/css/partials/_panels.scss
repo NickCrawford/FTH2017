@@ -99,13 +99,12 @@ $panel-3-color: ();
     $panel-colors: (remove-nth($panel-colors, $color-index));
     //Remove the color we just used from the list so we dont use it again.
     transform: translate(-50%, -50%) rotate(45deg); //skewX((random(3) * 15) + deg);
-    transition: left 0.75s ease-in-out, top 0.75s ease-in-out, transform 0.75s ease-in-out;
-    -webkit-transition-delay: 0s;
+    
+    transition: left 0.5s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out;
     transition-delay: 0s;
     &.away {
-      transition: left 0.75s ease-in-out, top 0.75s ease-in-out, transform 0.75s ease-in-out;
-      -webkit-transition-delay: 0.25s;
-      transition-delay: 0.25s;
+      transition: left 0.5s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out;
+      transition-delay: 0s;
     }
   }
 }
@@ -113,14 +112,13 @@ $panel-3-color: ();
 %half {
   position: absolute;
   top: 0;
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
   z-index: 0;
-  transition: left 0.75s ease-in-out, right 0.75s ease-in-out;
-  -webkit-transition-delay: 0.25s;
-    transition-delay: 0.25s;
+  transition: left 0.4s ease-in-out, right 0.4s ease-in-out;
+  transition-delay: 0.2s;
+  
   &.away {
-    -webkit-transition-delay: 0s;
     transition-delay: 0s;
   }
 }
@@ -128,7 +126,8 @@ $panel-3-color: ();
 .half_l {
   @extend %half;
   left: 0;
-  background-color: $panel-3-color;
+  //background-color: $panel-3-color;
+  background-image: linear-gradient(to right bottom, $panel-3-color 50%, rgba(0,0,0,0) 50%);
   @debug "half-l-color" + $panel-3-color;
   &.away {
     left: -100%;
@@ -138,7 +137,9 @@ $panel-3-color: ();
 .half_r {
   @extend %half;
   right: 0;
-  background-color: $panel-1-color;
+  //background-color: $panel-1-color;
+  background-image: linear-gradient(to right bottom, rgba(0,0,0,0) 50%, $panel-1-color 50%);
+
   @debug "half-r-color" + $panel-1-color;
   &.away {
     right: -100%;

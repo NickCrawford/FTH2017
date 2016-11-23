@@ -81,17 +81,17 @@ header {
 
   transform: translate(50%, 0%);
   transition: 
-  right 0.5s ease-in-out, 
-  top 0.5s ease-in-out, 
-  width 0.5s linear, 
-  height 0.5s linear, 
-  min-width 0.5s linear, 
-  min-height 0.5s linear,
-  max-width 0.5s linear, 
-  max-height 0.5s linear,
-  transform 0.5s ease-in-out;
+  right 0.4s ease-in-out, 
+  top 0.4s ease-in-out, 
+  width 0.4s linear, 
+  height 0.4s linear, 
+  min-width 0.4s linear, 
+  min-height 0.4s linear,
+  max-width 0.4s linear, 
+  max-height 0.4s linear,
+  transform 0.4s ease-in-out;
 
-  transition-delay: 0s;
+  transition-delay: 0.1s;
 
   cursor: pointer;
 
@@ -104,7 +104,7 @@ header {
     min-height: 60px;
     width: 14vh;
     height: 14vh;
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
     transform: translate(50%, 0%);
   }
 
@@ -132,7 +132,7 @@ header {
   
 }
 
-#date {
+.header-text {
   width: 100%;
   font-size: 3em;
   font-weight: 200;
@@ -144,6 +144,8 @@ header {
   text-align: center;
   text-transform: none;
   
+  white-space: pre;
+
   z-index: 190;
   
   -webkit-transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
@@ -164,7 +166,7 @@ header {
     min-height: 200px;
   }
 
-  #date {
+  .date {
     bottom: 5vh;
   }
 }

@@ -69,7 +69,7 @@ $(document).ready(function() {
             //Landing Content
             $('#panel-wrapper').children().removeClass('away');
             $('#logo').removeClass('away');
-            $('#date').removeClass('away');
+            $('.header-text').removeClass('away');
 
             $('nav').children().addClass('hidden');
             
@@ -84,7 +84,7 @@ $(document).ready(function() {
             //Remove Landing Page items
             $('#panel-wrapper').children().addClass('away');
             $('#logo').addClass('away');
-            $('#date').addClass('away');
+            $('.header-text').addClass('away');
             $('nav').children().removeClass('hidden');
 
             //Unhide Page about content
