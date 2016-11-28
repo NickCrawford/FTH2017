@@ -100,10 +100,10 @@ $panel-3-color: ();
     //Remove the color we just used from the list so we dont use it again.
     transform: translate(-50%, -50%) rotate(45deg); //skewX((random(3) * 15) + deg);
     
-    transition: left 0.5s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: left 0.65s ease-in-out, top 0.65s ease-in-out, transform 0.65s ease-in-out;
     transition-delay: 0s;
     &.away {
-      transition: left 0.5s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out;
+      transition: left 0.65s ease-in-out, top 0.65s ease-in-out, transform 0.65s ease-in-out;
       transition-delay: 0s;
     }
   }
@@ -115,7 +115,7 @@ $panel-3-color: ();
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  transition: left 0.4s ease-in-out, right 0.4s ease-in-out;
+  transition: left 0.5s ease-in-out, right 0.5s ease-in-out;
   transition-delay: 0.2s;
   
   &.away {
