@@ -13,6 +13,12 @@ $panel-3-color: ();
 
 }
 
+@media screen and (max-height: 375px) {
+  .fabric {
+    display: none;
+  }
+}
+
 .fabric {
   position: absolute;
   

@@ -66,7 +66,6 @@ a {
 		color: white;
 		position: relative;
 		top: 20px;
-		left: 0;
 		width: 100%;
 		max-width: 350px;
 		padding: 10px 20px;
@@ -102,6 +101,8 @@ a {
 	}
 }
 
+
+
 @media(min-width: 480px) {
 	h1 {
 		font-size: 2.5em;
@@ -117,12 +118,42 @@ a {
 	}
 
 	a.btn {
-
 		width: auto;
 		padding: 20px 40px;
 		font-size: 1.2em;
 	}
 }
+
+@media screen and (max-height: 375px) {
+	a.btn {
+		padding: 5px 10px;
+		width: 50%;
+		font-size: 1em;
+		top: 10px;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	.content {
+		padding-bottom: 20px !important;
+	}
+
+	.scroll-box {
+		margin-top: 10px !important;
+	}
+
+	.header-text {
+		font-size: 2.5em !important;
+	}
+
+	#logo {
+		min-width: auto !important;
+		min-height: auto !important;
+	}
+}
+
 
 /* ------ Normalize ----- */
 *,
