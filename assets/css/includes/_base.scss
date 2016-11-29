@@ -101,6 +101,11 @@ a {
 	}
 }
 
+.half-col {
+	width: 100%;
+	margin-right: 0;
+}
+
 
 
 @media(min-width: 480px) {
@@ -122,6 +127,11 @@ a {
 		width: auto;
 		padding: 20px 40px;
 		font-size: 1.2em;
+	}
+
+	.half-col {
+		margin-right: 20px;
+		width: calc(50% - 20px);
 	}
 }
 
@@ -172,11 +182,8 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 
-	//justify-content: space-between;
 	.half-col {
 		margin-bottom: 20px;
-		margin-right: 20px;
-		flex: 1 0 calc(50% - 20px);
 	}
 }
 

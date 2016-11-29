@@ -74,9 +74,12 @@ body {
 .scroll-box {
   margin-top: 20px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-
+.scroll-box::-webkit-scrollbar { 
+    display: none; 
+}
 
 .about {
   &.content-container {
