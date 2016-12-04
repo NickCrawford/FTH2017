@@ -1,7 +1,20 @@
 /*	FONTS
 ------------------------*/
 //@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@font-face {
+	font-family: 'National-ExtraBoldItalic';
+	src: url('../fonts/National-ExtraBoldItalic.otf');
+}
 
+@font-face {
+	font-family: 'National-Book';
+	src: url('../fonts/National-Book.otf');
+}
+
+@font-face {
+	font-family: 'Soho-Regular';
+	src: url('../fonts/SohoStd-Regular.otf');
+}
 
 /*	Colors
 –––––––––––––––––––––––––––*/
@@ -20,7 +33,7 @@ $indigo: #003876;
 /*	TYPOGRAPHY
 –––––––––––––––––––––––––––*/
 * {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'National-Book', Helvetica, Arial, sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	margin: 0;
@@ -31,6 +44,7 @@ html {
 }
 
 h1 {
+	font-family: 'National-ExtraBoldItalic';
 	font-size: 1.75em;
 	line-height: 1.5;
 	font-style: italic;

@@ -1,4 +1,5 @@
-_site/assets/css/style.css
+_site/assets/css/
+_site/assets/fonts/
 _site/index.html
 
 # Logs
@@ -48,3 +49,5 @@ jspm_packages
 
 .sass-cache/
 *.css.map
+
+*.DS_Store

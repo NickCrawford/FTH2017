@@ -15,7 +15,8 @@ var gulp = require('gulp'),
 var settings = {
 	publicDir: '_site',
 	sassDir: 'assets/css',
-	cssDir: '_site/assets/css'
+	cssDir: '_site/assets/css',
+	fontsDir: 'assets/fonts'
 };
 
 /**
@@ -66,6 +67,11 @@ gulp.task('sass', function () {
 		.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('fonts', function() {
+    return gulp.src(settings.fontsDir + '/*')
+            .pipe(gulp.dest(settings.publicDir + '/' + settings.fontsDir));
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch .pug files run pug-rebuild then reload BrowserSync
@@ -82,4 +88,4 @@ gulp.task('watch', function () {
  */
 gulp.task('default', ['browser-sync', 'watch']);
 
-gulp.task('build', ['pug', 'sass']);
+gulp.task('build', ['pug', 'sass', 'fonts']);
