@@ -82,8 +82,8 @@ header {
   height: 40vw;
   min-width: 250px;
   min-height: 250px;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 300px;
+  max-height: 300px;
 
   border-radius: 100%;
   margin: 0.75vh auto;
@@ -108,13 +108,13 @@ header {
 
   &.away {
     top: 0;
-    right: 0;
+    right: calc(60px + 0.75vh);
     min-width: 60px;
     min-height: 60px;
     width: 14vh;
     height: 14vh;
     transition-delay: 0.1s;
-    transform: translate(0%, 0%);
+    transform: translate(50%, 0%);
   }
 
   &.poke {
