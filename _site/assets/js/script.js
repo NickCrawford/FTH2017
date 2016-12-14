@@ -42,16 +42,16 @@ $(document).ready(function() {
 
             if (!$('#logo').hasClass('away')) {
 
-                if (zeroCount == 6) {
+                if (zeroCount == 16) {
                     pokeElement('#logo');
                 }
 
-                if (zeroCount % 16 == 0) {
+                if (zeroCount % 30 == 0) {
                     pokeElement('#logo');
                 }
 
                 if (zeroCount == 60) {
-                    scrollTo(1,0);
+                    //scrollTo(1,0);
                 }
             }
 
@@ -69,6 +69,7 @@ $(document).ready(function() {
             //Landing Content
             $('#panel-wrapper').children().removeClass('away');
             $('#logo').removeClass('away');
+            $('#mlh-trust-badge').removeClass('away');
             $('.header-text').removeClass('away');
 
             $('nav').children().addClass('hidden');
@@ -84,6 +85,7 @@ $(document).ready(function() {
             //Remove Landing Page items
             $('#panel-wrapper').children().addClass('away');
             $('#logo').addClass('away');
+            $('#mlh-trust-badge').addClass('away');
             $('.header-text').addClass('away');
             $('nav').children().removeClass('hidden');
 

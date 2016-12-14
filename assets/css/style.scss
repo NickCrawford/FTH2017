@@ -12,10 +12,6 @@ body {
   background-color: $light-blue;
 }
 
-#mlh-trust-badge {
-  display: none;
-}
-
 #fixed-container {
   position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -52,7 +48,7 @@ body {
 }
 
 .content {
-  padding: 18vh 7% 3vh 7%;
+  padding: 18vh 20px 3vh 20px;
   width: 100%;
   height: 100vh;
 
@@ -169,16 +165,12 @@ body {
     padding-top: 24vh;
     padding-bottom: 0vh;
   }
-
-  #mlh-trust-badge {
-    display:block;
-  }
 }
 
 @media screen and (min-width: 960px) {
 	.content {
-		padding-left: 0;
-		padding-right: 0;
+		padding-left: 19px;
+		padding-right: 19px;
 	}
 }
 
