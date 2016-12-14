@@ -5,7 +5,7 @@
 */
 
 $(document).ready(function() {
-    $('#logo').fadeIn(300);
+    $('#logo').fadeIn(400).delay(400).css('display', 'flex');;
 
     var numContentPanels = 4;
     var windowWidth = $(window).innerWidth();
