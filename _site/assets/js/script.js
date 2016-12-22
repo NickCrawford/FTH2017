@@ -4,6 +4,14 @@
     Get ready for some jQuery! :)
 */
 
+ jQuery.fn.rotate = function(degrees) {
+        $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+            '-moz-transform' : 'rotate('+ degrees +'deg)',
+            '-ms-transform' : 'rotate('+ degrees +'deg)',
+            'transform' : 'rotate('+ degrees +'deg)'});
+        return $(this);
+    };
+
 $(document).ready(function() {
     $('#logo').fadeIn(400).delay(400).css('display', 'flex');;
 
@@ -25,7 +33,7 @@ $(document).ready(function() {
             scrollTo(1, 0);
             pokeElement(this);
         } else {
-            scrollTo(0, 0);
+            scrollTo(0);
         }
     });
 
@@ -72,11 +80,8 @@ $(document).ready(function() {
             $('#mlh-trust-badge').removeClass('away');
             $('.header-text').removeClass('away');
 
+            $('nav').addClass('hidden');
             $('nav').children().addClass('hidden');
-            
-            hidePageOne();
-            hidePageTwo();
-            hidePageThree();
         }
 
         if (scrollTop > 0) {
@@ -87,91 +92,20 @@ $(document).ready(function() {
             $('#logo').addClass('away');
             $('#mlh-trust-badge').addClass('away');
             $('.header-text').addClass('away');
+
+            $('nav').removeClass('hidden');
             $('nav').children().removeClass('hidden');
-
-            //Unhide Page about content
-            $('.about').removeClass('hidden');
-
-            hidePageTwo();
-            hidePageThree();
-
-            //Animate content with scrolling
-            $('.fabric.one').rotate(45 - scrollTop / 15);
-            $('.about .content').float( - (scrollTop / 15.0));
         }
 
-        if (scrollTop > windowHeight) {
-            //Content sponsor
-            $('.sponsor').removeClass('hidden');
-            $('.fabric.two').addClass('away');
-
-            //Animate content with scrolling
-            $('.fabric.two').rotate(30 + scrollTop  / 5);
-            $('.sponsor .content').float( - (scrollTop / 15.0) + (windowHeight*2 / 15.0));
-
-            hidePageOne();
-            hidePageThree();
-        }
-
-        if (scrollTop > windowHeight * 2) {
-            //Content sponsor
-            $('.sponsor').addClass('hidden');
-            $('.faq').removeClass('hidden');
-            $('.fabric.three').addClass('away');
-
-            //Animate content with scrolling
-            $('.fabric.three').rotate(45 - scrollTop  / 3);
-            $('.faq .content').float( - (scrollTop / 15.0) + (windowHeight*2 / 15.0));
-        }
+         //Animate content with scrolling
+        $('.fabric.one').rotate(45 - scrollTop / 15);
+        $('.fabric.two').rotate(30 + scrollTop  / 5);
+        $('.fabric.three').rotate(45 - scrollTop  / 3);
     }
-
-    function hidePageOne() {
-        $('.about').addClass('hidden');
-    }
-
-    function hidePageTwo() {
-        //hide page 2
-        $('.sponsor').addClass('hidden');
-        $('.fabric.two').removeClass('away');
-    }
-
-    function hidePageThree() {
-        //hide page 3
-        $('.faq').addClass('hidden');
-        $('.fabric.three').removeClass('away');
-    }
-
     //Resize window and body height
     $(window).resize(function() {
-        resizeBody();
         windowWidth = $(window).innerWidth();
     });
-
-    function resizeBody() {
-        $('body').innerHeight(window.innerHeight * numContentPanels);
-    }
-
-    resizeBody();
-
-    jQuery.fn.rotate = function(degrees) {
-        $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
-            '-moz-transform' : 'rotate('+ degrees +'deg)',
-            '-ms-transform' : 'rotate('+ degrees +'deg)',
-            'transform' : 'rotate('+ degrees +'deg)'});
-        return $(this);
-    };
-
-    jQuery.fn.float = function(amount) {
-        //Disable on mobile
-        if (windowWidth < 960) {
-            $(this).css({'transform' : 'translateY(0)'});
-        } else {
-            $(this).css({'transform' : 'translateY('+amount+'px)'});
-        }
-        
-
-        return $(this);
-    }
 
     //Handle Internal Links
     $('.nav-item a').click(function(event){
@@ -182,16 +116,11 @@ $(document).ready(function() {
         var windowHeight = window.innerHeight;
         var section = event.target.hash;
 
-        switch(section) {
-            case '#about': scrollTo(1)
-            break;
-            case '#sponsor': scrollTo(windowHeight + 1);
-            break;
-            case '#faq': scrollTo(windowHeight*2 + 1);
-            break;
-            case '#contact': scrollTo(windowHeight*3 + 1);
-            break;
-        }
+        var section = section.replace("#", ".");
+
+        console.log(section);
+        console.log($(section).offset().top);
+        scrollTo($(section).offset().top);
 
         return false;
     });

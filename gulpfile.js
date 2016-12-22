@@ -16,7 +16,8 @@ var settings = {
 	publicDir: '_site',
 	sassDir: 'assets/css',
 	cssDir: '_site/assets/css',
-	fontsDir: 'assets/fonts'
+	fontsDir: 'assets/fonts',
+	dataDir: './_data'
 };
 
 /**
@@ -26,7 +27,10 @@ var settings = {
 gulp.task('pug', function () {
 	return gulp.src('*.pug')
 		.pipe(data(function (file) {
-			return require('./_data/' + path.basename(file.path) + '.json');
+			return require(settings.dataDir + '/' + path.basename(file.path) + '.json');
+		}))
+		.pipe(data(function (file) {
+			return require(settings.dataDir + '/schedule.pug.json');
 		}))
 		.pipe(pug())
 		.pipe(gulp.dest(settings.publicDir));
@@ -77,6 +81,7 @@ gulp.task('fonts', function() {
  * Watch .pug files run pug-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
+	gulp.watch(settings.dataDir + '/**/*.json', ['pug-rebuild']);
 	gulp.watch(settings.sassDir + '/**', ['sass']);
 	gulp.watch(['*.pug', '**/*.pug'], ['pug-rebuild']);
 });

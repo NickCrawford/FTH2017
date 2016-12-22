@@ -15,42 +15,35 @@ body {
 #fixed-container {
   position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;
-}
-
-#content-backgrounds {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 90;
+  z-index: 10;
+  pointer-events: none;
 }
 
 #content-wrapper {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: relative;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 150;
+  height: auto;
+  overflow-y: visible;
+  overflow-x: hidden;
+  z-index: 0;
 }
 
 .content-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  transition: transform 0.75s ease-in-out;
+  min-height: 90vh;
+  margin-bottom: -10vh;
+
+  &:first-of-type {
+    margin-top: 80px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .content {
-  padding: 18vh 20px 3vh 20px;
+  padding: 14vh 20px 18vh 20px;
   width: 100%;
-  height: 100vh;
 
   position: relative;
   top: 0;
@@ -58,38 +51,18 @@ body {
   right: 0;
   bottom: 0;
 
-  max-width: 960px;
+  max-width: 890px;
   margin: 0 auto;
   margin-top: 0;
   text-align: left;
-  overflow: hidden;
 
   z-index: 250;
-}
-
-.scroll-box {
-  margin-top: 20px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-.scroll-box::-webkit-scrollbar { 
-    display: none; 
 }
 
 .about {
   &.content-container {
     background-color: $blue-green;
-    -webkit-clip-path: polygon(90% 15%, 100% 15%, 100% 100%, 0 100%, 0 10%, 60% 10%);
-    clip-path: polygon(90% 15%, 100% 15%, 100% 100%, 0 100%, 0 10%, 60% 10%);
-  }
-
-  transition: transform 0.5s ease-in-out;
-  transform: translate(0%) rotate(0deg);
-  transform-origin: bottom right;
-  
-  &.hidden {
-    transform: translate(50%, 100%) rotate(-45deg);
+    clip-path: polygon(90% 15%, 100% 15%, 100% 95%, 50% 95%, 40% 100%, 0 100%, 0 10%, 60% 10%);
   }
   
   .content {
@@ -103,19 +76,12 @@ body {
 
   &.content-container {
     background-color: $light-green;
-    -webkit-clip-path:  polygon(0 15%, 10% 15%, 30% 10%, 100% 10%, 100% 100%, 0% 100%);
-    clip-path:  polygon(0 15%, 30% 10%, 100% 10%, 100% 100%, 0% 100%);
+    clip-path:  polygon(0 5%, 30% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
-  transition: transform 0.5s ease-in-out;
-  transform: translate(0%, 0%) rotate(0deg);
-  //transform-origin: bottom left;
   
-  &.hidden {
-    transform: translate(-50%, 100%) rotate(45deg);
-  }
-
   .content {  
-
+    text-align: right;
+    align-items: flex-end;
     h1 {
       color: $indigo;
     }
@@ -129,16 +95,7 @@ body {
 .faq {
   &.content-container {
     background-color: $turquoise;
-    -webkit-clip-path: polygon(90% 15%, 100% 15%, 100% 100%, 0 100%, 0 10%, 60% 10%);
-    clip-path: polygon(90% 15%, 100% 15%, 100% 100%, 0 100%, 0 10%, 60% 10%);
-  }
-
-  transition: transform 0.5s ease-in-out;
-  transform: translate(0%) rotate(0deg);
-  transform-origin: bottom right;
-  
-  &.hidden {
-    transform: translate(50%, 100%) rotate(-45deg);
+    clip-path: polygon(90% 5%, 100% 0%, 100% 100%, 0 100%, 0% 0%, 60% 0%);
   }
   
   .content {
@@ -152,18 +109,53 @@ body {
   }
 }
 
+.schedule {
+  &.content-container {
+    background-color: $blue;
+    clip-path: polygon(90% 5%, 100% 5%, 100% 100%, 0 100%, 0% 5%, 60% 0%);
+  }
+  
+  .content {
+    h1 {
+      color: white;
+    }
+
+    h2 {
+      color: $light-blue;
+    }
+  }
+
+  .event {
+    margin-bottom: 1.2em;
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    .time {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 1em;
+    }
+    .location {
+      white-space: nowrap;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+  }
+}
+
 
 .about, .sponsor, .faq {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  display: block;
+  position: relative;
 }
 
 @media (min-width: 480px) {
   .content {
-    padding-top: 24vh;
-    padding-bottom: 0vh;
+    padding-top: 18vh;
+    padding-bottom: 18vh;
   }
 }
 

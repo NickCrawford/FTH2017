@@ -10,7 +10,7 @@ $panel-3-color: ();
   height: 100vh;
   overflow: hidden;
   z-index: 150;
-
+  pointer-events: none;
 }
 
 @media screen and (max-height: 375px) {
@@ -33,33 +33,23 @@ $panel-3-color: ();
 }
 
 .fabric.one {
-  bottom: -200%;
-  left: -15%;
-  
-  &.away {
-    bottom: -15vw;
-    left: -10%;
-  }
+  bottom: 0;
+  right: -10%;
  
-  width: 60vw;
+  width: 40vw;
   height: 40vw;
   
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 300px;
+  max-height: 300px;
 
   background-color: $green;
 
 }
 
 .fabric.two {
-  bottom: -100%;
-  left: 25%;
-  
-  &.away {
-    bottom: -10%;
-    left: 25%;
-  }
-  
+  bottom: 5vh;
+  left: 0%;
+
   max-width: 200px;
   max-height: 200px;
   
@@ -70,16 +60,11 @@ $panel-3-color: ();
 }
 
 .fabric.three {
-  bottom: -100%;
-  left: 48%;
+  bottom: -2vh;
+  right: 5%;
   
-  &.away {
-    bottom: -10%;
-    left: 48%;
-  }
-  
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 200px;
+  max-height: 200px;
   
   width: 15vw;
   height: 15vw;
@@ -138,6 +123,10 @@ $panel-3-color: ();
   &.away {
     left: -100%;
   }
+}
+
+html, #content-wrapper {
+  background-color: $light-blue;
 }
 
 .half_r {

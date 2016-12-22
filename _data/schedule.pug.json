@@ -1,0 +1,138 @@
+{
+	"days": [
+		{
+			"name": "Friday",
+			"events": [
+			{
+				"name" : "Check in Starts",
+				"location" : "Rockwell Atrium",
+				"time" : "5 pm"
+			}, 
+			{
+				"name" : "Tech Materials Preview Starts",
+				"location" : "TechStyleLAB, Room 302",
+				"time" : "5 pm"
+			}, 
+			{
+				"name" : "Smash Bros 4 Tournament",
+				"location" : "Room 322",
+				"time" : "5:30 pm"
+			}, 
+			{
+				"name" : "Opening Ceremonies",
+				"location" : "Architecture Building",
+				"time" : "7 pm"
+			}, 
+			{
+				"name" : "Dinner",
+				"description" : "",
+				"location" : "2nd Floor Atrium",
+				"time" : "8 pm"
+			}, 
+			{
+				"name" : "Smash Bros Tournament",
+				"description" : "",
+				"location" : "Room 322",
+				"time" : "8 pm"
+			}, 
+			{
+				"name" : "Hacking Starts",
+				"description" : "",
+				"time" : "9 pm"
+			}
+		]},
+
+		{
+			"name": "Saturday",
+			"events" : [
+			{
+				"name" : "Snack",
+				"description" : "",
+				"location" : "2nd Floor Atrium",
+				"time" : "12 am"
+
+			}, 
+			{
+				"name" : "Breakfast",
+				"description" : "",
+				"location" : "2nd Floor Atrium",
+				"time" : "8 am"
+			}, 
+			{
+				"name" : "High School Coding Workshop",
+				"description" : "",
+				"location" : "Room 322",
+				"time" : "10 am"
+			}, 
+			{
+				"name" : "Lunch",
+				"description" : "",
+				"location" : "2nd Floor Atrium",
+				"time" : "12 pm"
+			}, 
+			{
+				"name" : "Dinner",
+				"description" : "",
+				"location" : "2nd Floor Atrium",
+				"time" : "8 pm"
+			}, 
+			{
+				"name" : "Hearthstone Tournament",
+				"description" : "",
+				"location" : "Room 322",
+				"time" : "10 pm"
+			}
+		]},
+
+		{
+			"name": "Sunday",
+			"events" : [
+			{
+				"name" : "Ice Cream Sundae Bar",
+				"description" : "",
+				"location" : "2nd Floor Atrium",
+				"time" : "12 am"
+
+			}, 
+			{
+				"name" : "Breakfast",
+				"description" : "",
+				"location" : "2nd Floor Atrium",
+				"time" : "8 am"
+			}, 
+			{
+				"name" : "Project Submission Deadline",
+				"description" : "",
+				"location" : "Fashion School Library",
+				"time" : "8 am"
+			}, 
+			{
+				"name" : "Hacking Ends",
+				"description" : "",
+				"time" : "9 am"
+			}, 
+			{
+				"name" : "Project Expo",
+				"description" : "",
+				"location" : "Rockwell Hall Atrium",
+				"time" : "10 - 11:30 am"
+			}, 
+			{
+				"name" : "Sponsor Reception",
+				"location" : "2nd Floor Atrium East",
+				"time" : "10 - 12 pm"
+			}, 
+			{
+				"name" : "Lunch",
+				"description" : "",
+				"location" : "2nd Floor Atrium West",
+				"time" : "12 pm"
+			}, 
+			{
+				"name" : "Closing Ceremonies",
+				"location" : "Rockwell Hall Auditorium",
+				"time" : "1 pm"
+			}
+		]}
+	]
+}
