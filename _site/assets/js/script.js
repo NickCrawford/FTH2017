@@ -15,10 +15,7 @@
 $(document).ready(function() {
     $('#logo').fadeIn(400).delay(400).css('display', 'flex');;
 
-    var numContentPanels = 4;
     var windowWidth = $(window).innerWidth();
-
-    checkScrollPosition(0);
 
     $(window).scroll(function(event) {
         var st = $(this).scrollTop();
@@ -30,7 +27,7 @@ $(document).ready(function() {
         var scrollTop = $(window).scrollTop();
 
         if (scrollTop <= 0) {
-            scrollTo(1, 0);
+            scrollTo(50, 0);
             pokeElement(this);
         } else {
             scrollTo(0);
@@ -90,6 +87,7 @@ $(document).ready(function() {
             //Remove Landing Page items
             $('#panel-wrapper').children().addClass('away');
             $('#logo').addClass('away');
+            $('.typeform-share').addClass('waggle');
             $('#mlh-trust-badge').addClass('away');
             $('.header-text').addClass('away');
 

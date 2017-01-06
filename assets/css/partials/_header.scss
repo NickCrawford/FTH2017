@@ -151,10 +151,6 @@ header {
     transform: translate(50%, 0%);
   }
 
-  &.poke {
-    animation: poke 1s ease;
-  }
-
   img {
     width: 100%;
   }
@@ -165,6 +161,14 @@ header {
     min-width: auto;
     min-height: auto;
   }
+}
+
+.waggle {
+  animation: waggle 1s ease 2s;
+}
+
+.poke {
+    animation: poke 1s ease;
 }
 
 @-webkit-keyframes poke {
@@ -183,7 +187,37 @@ header {
   90% {
     transform: translate(50%, -2%);
   }
-  
+}
+
+@-webkit-keyframes waggle{
+  15% {
+    transform: translateY(-16%) rotate(0deg);
+  }
+
+  30% {
+    transform: translateY(-16%) rotate(5deg);
+  }
+
+  45% {
+    transform: translateY(-16%) rotate(-5deg);
+  }
+
+  60% {
+    transform: translateY(-16%) rotate(5deg);
+  }
+
+  75% {
+    transform: translateY(-16%) rotate(-5deg);
+  }
+
+  90% {
+    transform: translateY(-16%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(0%) rotate(0deg);
+  }
+
 }
 
 .header-text {

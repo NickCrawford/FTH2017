@@ -113,6 +113,10 @@ a {
 		&:hover {
 			color: $light-blue;
 		}
+
+		&.poke {
+			animation-delay: 300ms;
+		}
 	}
 }
 
@@ -174,7 +178,7 @@ a {
 	}
 
 	.content {
-		padding-bottom: 20px !important;
+		padding-bottom: 60px !important;
 	}
 
 	.scroll-box {
