@@ -13,6 +13,8 @@
     };
 
 $(document).ready(function() {
+
+
     $('#logo').fadeIn(400).delay(400).css('display', 'flex');;
 
     var windowWidth = $(window).innerWidth();
@@ -47,11 +49,11 @@ $(document).ready(function() {
 
             if (!$('#logo').hasClass('away')) {
 
-                if (zeroCount == 16) {
+                if (zeroCount == 30) {
                     pokeElement('#logo');
                 }
 
-                if (zeroCount % 30 == 0) {
+                if (zeroCount % 60 == 0) {
                     pokeElement('#logo');
                 }
 
@@ -66,6 +68,8 @@ $(document).ready(function() {
 
     //Start checking if user on landing screen
     landingScreenPrompt(0);
+
+    checkScrollPosition(0);
 
     function checkScrollPosition(scrollTop) {
         var windowHeight = window.innerHeight;
@@ -87,7 +91,6 @@ $(document).ready(function() {
             //Remove Landing Page items
             $('#panel-wrapper').children().addClass('away');
             $('#logo').addClass('away');
-            $('.typeform-share').addClass('waggle');
             $('#mlh-trust-badge').addClass('away');
             $('.header-text').addClass('away');
 
@@ -137,6 +140,18 @@ $(document).ready(function() {
             $(element).removeClass('poke')
         }, 1000);
     }
+
+    function waggleElement(element) {
+        $(element).addClass('waggle');
+        setTimeout(function() {
+            $(element).removeClass('waggle')
+        }, 1000);
+    }
+
+    //Animate the apply button
+    setInterval(function() {
+        waggleElement('.typeform-share');
+    }, 7000);
 
 });//End
 

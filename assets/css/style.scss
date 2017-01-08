@@ -3,6 +3,7 @@
 
 @import "partials/header";
 @import "partials/panels";
+@import "partials/social-icons";
 
 body {
   display: block;
@@ -57,6 +58,10 @@ body {
   text-align: left;
 
   z-index: 250;
+
+  &:last-of-type {
+    padding-bottom: 120px;
+  }
 }
 
 .about {
@@ -113,6 +118,7 @@ body {
   &.content-container {
     background-color: $blue;
     clip-path: polygon(90% 5%, 100% 5%, 100% 100%, 0 100%, 0% 5%, 60% 0%);
+    margin-bottom: -100px;
   }
   
   .content {
@@ -146,11 +152,6 @@ body {
   }
 }
 
-
-.about, .sponsor, .faq {
-  display: block;
-  position: relative;
-}
 
 @media (min-width: 480px) {
   .content {
