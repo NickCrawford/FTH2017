@@ -11,7 +11,9 @@
 		div.flex-row
 			div.half-col
 				h2 How much does this cost?
-				p Nothing! The Fashion / Tech Hackathon is free for all to attend. We'll provide your meals and swag for the weekend, and in some cases we'll even provide travel reimbursement up to $100.
+				p Nothing! The Fashion / Tech Hackathon is free for all to attend. We'll provide your meals and swag for the weekend, and in some cases we'll even provide travel reimbursement up to $100. For more information, please check out our 
+					a(href='/assets/static/Hackathon Reimbursement Policy.pdf' target="_blank") Reimbursement Policy
+					| .
 			div.half-col
 				h2 What are the prizes?
 				p This year, we'll be handling prizes differently. Instead of first, second and third, we'll have four category prizes: 
@@ -26,5 +28,31 @@
 				h2 What are the rules?
 				p Teams can consist of 1-4 students, and the entire project must be built at the event. You may use publicly available libraries, but besides that no lines of code should be written, and no seams should be sewn.
 				p Hackers must also adhere to 
-					a(href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf") MLH's Code of Conduct
+					a(href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank") MLH's Code of Conduct
+		div.flex-row
+			.half-col
+				h2 How do I get there?
+				p Check out our 
+					a(href='/assets/static/Getting to The Fashion Tech Hackathon.pdf' target="_blank") Travel Guide
+					|  for information on how to get to here.
+
+				p Fashion School<br/>
+					| 515 Hilltop Drive,<br/>
+					| Kent, Ohio 44242 
+			.half-col
+				#map
+				script.
+					function initMap() {
+						var fashionBuilding = {lat: 41.152698, lng: -81.349925};
+						var map = new google.maps.Map(document.getElementById('map'), {
+						  zoom: 16,
+						  center: fashionBuilding,
+						  disableDefaultUI: true
+						});
+						var marker = new google.maps.Marker({
+						  position: fashionBuilding,
+						  map: map
+						});
+					  }
+				script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCixzGi82N7rep7J-R9msjMKvG1r7Mm0LM&callback=initMap")
 	.fabric.three

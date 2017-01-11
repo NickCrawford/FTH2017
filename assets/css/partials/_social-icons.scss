@@ -4,15 +4,13 @@ $resting-rotation: -225deg;
 	z-index: 100;
 	overflow: hidden;
 
-	position: absolute;
-	top: calc(100% - 40px);
-	left: 0;
+	position: relative;
 	width: 100%;
 	height: 60px;
 	padding: 40px;
 	box-sizing: content-box;
 
-	background: transparent;
+	background: $blue;
 	text-align: center;
 
 	$color-list: $turquoise,$green,$light-green,$blue-green;
@@ -23,6 +21,7 @@ $resting-rotation: -225deg;
 		margin: 0 5%;
 		height: 60px;
 		width: 60px;
+		border-bottom: none;
 
 		svg {
 			width: 100%;

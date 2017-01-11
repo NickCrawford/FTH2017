@@ -24,8 +24,7 @@ body {
   position: relative;
   width: 100vw;
   height: auto;
-  overflow-y: visible;
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: 0;
 }
 
@@ -36,10 +35,6 @@ body {
 
   &:first-of-type {
     margin-top: 160px;
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
   }
 }
 
@@ -119,10 +114,11 @@ body {
   &.content-container {
     background-color: $blue;
     clip-path: polygon(90% 5%, 100% 5%, 100% 100%, 0 100%, 0% 5%, 60% 0%);
-    margin-bottom: -100px;
+    margin-bottom: 0;
   }
   
   .content {
+    padding-bottom: 0px;
     h1 {
       color: white;
     }
@@ -151,6 +147,14 @@ body {
       font-style: italic;
     }
   }
+}
+
+#map {
+  border: 2px dashed $indigo;
+  border-radius: 5px;
+
+  margin: 10px 20px 20px;
+  height: 250px;
 }
 
 

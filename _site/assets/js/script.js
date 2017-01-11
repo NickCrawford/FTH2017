@@ -38,38 +38,17 @@ $(document).ready(function() {
 
     // Check if user is stuck on landing screen
     function landingScreenPrompt(zeroCount) {
-        setTimeout(function() {
-            var scrollTop = $(window).scrollTop();
-
-            if (scrollTop == 0) {
-                zeroCount += 1;
-            } else {
-                zeroCount = 0;
-            }
-
+        setInterval(function() {
             if (!$('#logo').hasClass('away')) {
-
-                if (zeroCount == 30) {
-                    pokeElement('#logo');
-                }
-
-                if (zeroCount % 60 == 0) {
-                    pokeElement('#logo');
-                }
-
-                if (zeroCount == 60) {
-                    //scrollTo(1,0);
-                }
+                pokeElement('#logo');
             }
-
-            landingScreenPrompt(zeroCount);
-        }, 500);
+        }, 15000)
     }
 
     //Start checking if user on landing screen
     landingScreenPrompt(0);
 
-    checkScrollPosition(0);
+    checkScrollPosition($(window).scrollTop());
 
     function checkScrollPosition(scrollTop) {
         var windowHeight = window.innerHeight;

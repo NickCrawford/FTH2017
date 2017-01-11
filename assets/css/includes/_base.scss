@@ -68,6 +68,10 @@ p {
 a {
 	text-decoration: none;
 
+	&:not(.btn) {
+		border-bottom: 1px dashed $black;
+	}
+
 	color: $black;
 	transition: color 0.25s ease;
 	
