@@ -1,0 +1,29 @@
+.sponsor-link {
+	text-decoration: none;
+	border: none !important;
+	height: 100%;
+
+	img {
+		width: 100%;
+		height: auto;
+
+		max-height: 100px;
+		object-fit: contain;
+	}
+}
+
+.sponsor .flex-row {
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+
+	margin-top: 60px;
+	&:first-of-type {
+		margin-top: 0px;
+	}
+
+	.third-col {
+		width: calc(33% - 30px);
+		margin-left: 15px;
+	}
+}
