@@ -17,7 +17,10 @@
 				"name" : "Opening Ceremonies",
 				"location" : "2nd Floor Auditorium, Rockwell Hall",
 				"time" : "7 pm"
-			}, 
+			},
+			{
+				"description" : "Speakers:"
+			},
 			{
 				"name" : "Dinner",
 				"description" : "",
@@ -93,6 +96,12 @@
 				"description" : "",
 				"location" : "1st Floor Lobby, Center for Architecture and Environmental Design",
 				"time" : "9 am"
+			},
+			{
+				"name" : "VIP Breakfast",
+				"description" : "",
+				"location" : "Room 201, Center for Architecture and Environmental Design",
+				"time" : "9 - 10 am"
 			}, 
 			{
 				"name" : "Project Expo",
