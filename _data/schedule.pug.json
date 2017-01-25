@@ -23,7 +23,7 @@
 			},
 			{
 				"name" : "Dinner",
-				"description" : "",
+				"description" : "Chicken & vegetarian tacos from Fresco",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
 				"time" : "8 pm"
 			}, 
@@ -34,7 +34,7 @@
 			},
 			{
 				"name" : "Snack",
-				"description" : "",
+				"description" : "Hummus and pita from Main Street Contintental Grill",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
 				"time" : "Midnight"
 			}
@@ -63,13 +63,13 @@
 			}, 
 			{
 				"name" : "Lunch",
-				"description" : "",
+				"description" : "Sandwiches from Jimmy Johns and vegetarian chili from Main Street Contintental Grill",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
 				"time" : "12 pm"
 			}, 
 			{
 				"name" : "Dinner",
-				"description" : "",
+				"description" : "Pasta with marinara sauce and meatballs from Belleria",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
 				"time" : "7 pm"
 			},
@@ -93,7 +93,7 @@
 			"events" : [
 			{
 				"name" : "Breakfast",
-				"description" : "",
+				"description" : "Donuts fron Dunkin' Donuts",
 				"location" : "2nd Floor Atrium",
 				"time" : "8 am"
 			}, 
@@ -123,7 +123,7 @@
 			}, 
 			{
 				"name" : "Lunch",
-				"description" : "",
+				"description" : "Sandwiches and chips from Jimmy Johns",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
 				"time" : "Noon"
 			}, 
