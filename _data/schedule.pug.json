@@ -54,6 +54,12 @@
 				"description" : "",
 				"location" : "Room 122",
 				"time" : "10 am"
+			},
+			{
+				"name" : "Yoga",
+				"description" : "",
+				"location" : "2nd Floor Atrium, Rockwell Hall",
+				"time" : "10 am"
 			}, 
 			{
 				"name" : "Lunch",
