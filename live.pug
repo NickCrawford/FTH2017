@@ -4,14 +4,14 @@ block head_end
 	link(rel="stylesheet" href="assets/css/style.css") 
 
 block content
-	a(href="/" style="position: absolute; top: 20px; left: 20px;") Back to event page
+	a(href="/" style="position: absolute; top: 20px; left: 20px;") < Back to event page
 	.content
 		img(src="assets/img/FashionTechLogoROUND_17.svg" style="width: 40%; margin: -100px 50% 20px; left: 50%; transform: translateX(-50%);")
-		div(style="text-align: center; margin-bottom: -60px;")
+		div(style="text-align: center; margin-bottom: -60px; justify-content: space-around;").flex-row
 			h1 Welcome to 4th Annual Fashion/Tech Hackathon!
-			a(href='https://boxcast.tv/view/fashion-tech-hackathon-opening-ceremony-248843').btn Watch the Opening Ceremony
-			a(href='https://fth2017.devpost.com/' style="margin-left: 50px;").btn View Devpost
-		//a(href='https://boxcast.tv/view/fashion-tech-hackathon-closing-ceremony-896054').btn Watch the Closing Ceremony
+			a(href='https://boxcast.tv/view/fashion-tech-hackathon-opening-ceremony-248843').btn Opening Ceremony
+			a(href='https://fth2017.devpost.com/').btn View Devpost
+			a(href='https://boxcast.tv/view/fashion-tech-hackathon-closing-ceremony-896054').btn Closing Ceremony
 	.schedule.content-container
 		.content
 			.flex-row
@@ -20,6 +20,11 @@ block content
 					h3 SSID: KSUEvent
 					h3 Password: fashion2017
 					br
+					h2 Lost and Found
+					h3 1st floor library
+					br
+					h2 Mentors and Help
+					h3 1st floor library
 
 				.half-col
 					h2 Announcements
