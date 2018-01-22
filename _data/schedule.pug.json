@@ -16,21 +16,26 @@
 			{
 				"name" : "Opening Ceremonies",
 				"location" : "2nd Floor Auditorium, Rockwell Hall",
-				"time" : "7 pm"
+				"time" : "6:30 pm"
+			},
+			{
+				"name" : "Team Building / Idea Generation Event",
+				"location" : "2nd Floor Auditorium, Rockwell Hall",
+				"time" : "7:00 pm"
 			},
 			{
 				"description" : "Speakers:"
 			},
 			{
 				"name" : "Dinner",
-				"description" : "Chicken & vegetarian tacos from Fresco",
+				"description" : "Make your own Fajita",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
-				"time" : "8 pm"
+				"time" : "7:30 pm"
 			}, 
 			{
 				"name" : "Hacking Starts",
 				"description" : "",
-				"time" : "9 pm"
+				"time" : "8 pm"
 			},
 			{
 				"name" : "Snack",
@@ -45,7 +50,7 @@
 			"events" : [ 
 			{
 				"name" : "Breakfast",
-				"description" : "",
+				"description" : "Breakfast Burritos from Fresco",
 				"location" : "2nd Floor Atrium",
 				"time" : "8 am"
 			}, 
@@ -65,7 +70,7 @@
 				"name" : "Lunch",
 				"description" : "Sandwiches from Jimmy Johns and vegetarian chili from Main Street Contintental Grill",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
-				"time" : "12 pm"
+				"time" : "12:30 pm"
 			}, 
 			{
 				"name" : "Dinner",
@@ -93,7 +98,7 @@
 			"events" : [
 			{
 				"name" : "Breakfast",
-				"description" : "Donuts fron Dunkin' Donuts",
+				"description" : "Tree City Coffee & Pastry Catering",
 				"location" : "2nd Floor Atrium",
 				"time" : "8 am"
 			}, 
@@ -101,36 +106,30 @@
 				"name" : "Project Submission Deadline",
 				"description" : "",
 				"location" : "Fashion School Library, Rockwell Hall",
-				"time" : "8 am"
+				"time" : "7 am"
 			}, 
 			{
 				"name" : "Hacking Ends and Expo Setup",
 				"description" : "",
 				"location" : "1st Floor Lobby, Center for Architecture and Environmental Design",
-				"time" : "9 am"
+				"time" : "8 am"
 			},
-			{
-				"name" : "VIP Breakfast",
-				"description" : "",
-				"location" : "Room 201, Center for Architecture and Environmental Design",
-				"time" : "9 - 10 am"
-			}, 
+			// {
+			// 	"name" : "VIP Breakfast",
+			// 	"description" : "",
+			// 	"location" : "Room 201, Center for Architecture and Environmental Design",
+			// 	"time" : "9 - 10 am"
+			// }, 
 			{
 				"name" : "Project Expo",
 				"description" : "",
 				"location" : "1st Floor Lobby, Center for Architecture and Environmental Design",
-				"time" : "10 - 11:30 am"
-			}, 
-			{
-				"name" : "Lunch",
-				"description" : "Sandwiches and chips from Jimmy Johns",
-				"location" : "2nd Floor Atrium, Rockwell Hall",
-				"time" : "Noon"
+				"time" : "9 - 10:30 am"
 			}, 
 			{
 				"name" : "Closing Ceremonies",
 				"location" : "1st Floor Lobby, Center for Architecture and Environmental Design",
-				"time" : "1 pm"
+				"time" : "11 am"
 			}
 		]}
 	]
