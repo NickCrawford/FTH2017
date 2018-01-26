@@ -4,35 +4,48 @@ block head_end
 	link(rel="stylesheet" href="assets/css/style.css") 
 
 block content
-	a(href="/" style="position: absolute; top: 20px; left: 20px;") < Event Page
+	a(href="/" style="position: absolute; top: 20px; left: 20px;") &lt; Event Page
 	.content
 		img(src="assets/img/FashionTechLogoROUND_17.svg" style="width: 40%; margin: -100px 50% 20px; left: 50%; transform: translateX(-50%);")
 		div(style="text-align: center; margin-bottom: -60px; justify-content: space-around;").flex-row
-			h1 Welcome to 4th Annual Fashion/Tech Hackathon!
-			a(href='https://boxcast.tv/view/fashion-tech-hackathon-opening-ceremony-248843').btn Opening Ceremony
-			a(href='https://fth2017.devpost.com/').btn View Devpost
-			a(href='https://boxcast.tv/view/fashion-tech-hackathon-closing-ceremony-896054').btn Closing Ceremony
+			h1 Welcome to 5th Annual Fashion/Tech Hackathon!
+			//- a(href='https://boxcast.tv/view/fashion-tech-hackathon-opening-ceremony-248843').btn Opening Ceremony
+			a(href='https://fth2018.devpost.com/').btn View Devpost
+			//- a(href='https://boxcast.tv/view/fashion-tech-hackathon-closing-ceremony-896054').btn Closing Ceremony
 	.schedule.content-container
 		.content
 			.flex-row
 				.half-col
 					h2 Event Wifi
-					h3 SSID: KSUEvent
-					h3 Password: fashion2017
+					h3 SSID: KSUHack2018
+					h3 Password: K3nt1910
 					br
 					h2 Lost and Found
 					h3 1st floor library
 					br
-					h2 Mentors and Help
-					h3 1st floor library
+					h2 Showers
+					h3 Head to the KSU Rec Center and show your lanyard + badge. Towels are available in the lower level. See the bus info below.
+					br
+					h2 Need Help?
+					h3 Come to the 1st floor library.
+
 
 				.half-col
 					h2 Announcements
-					h3 Text "Follow FashTechHack" to 404-04 for live updates on our schedule.
+					h3 Join our Slack team for announcements. You can also post messages to get help or find other teammates.
 					br
-					div(style="height: 600px; overflow: scroll;")
-						a.twitter-timeline(href='https://twitter.com/fashtechhack') Tweets by fashtechhack
-						script(async='', src='//platform.twitter.com/widgets.js', charset='utf-8')
+					a(href="https://join.slack.com/t/fashtechhack/shared_invite/enQtMzA1Mjk1OTkxNDkxLWMyYTA5YmM5MmFhZGNhYWQ2YmMzZmJhZmZjNTc2NmViOWY1YThkYjBkZTRjZGFmZWJjNGQyYjExZDBiN2MzYWQ") Click Here to Join our Slack Workspace
+
+			.flex-row
+				.half-col
+					h2 How to Get Around Campus
+					h3 There's several events during the hackathon that take place at verious locations around campus. While walking is always an option, the Kent State PARTA bus system is a great way to travel. Routes 53 and 58 will most likely be the ones you need. Use the Spot PARTA website below to help plan your trip. If you have any specific questions, check with someone in the 1st floor library.
+
+					a(href="https://www.google.com/maps/dir/Rockwell+Hall,+Hilltop+Drive,+Kent,+OH/KSU+Recreation+%26+Wellness+Center,+Kent,+OH+44243/@41.1482397,-81.3499449,16z/data=!4m16!4m15!1m5!1m1!1s0x8831252894285db1:0xa6a329176edb2c08!2m2!1d-81.3499335!2d41.152762!1m5!1m1!1s0x88313accd5c4e89f:0x18a4a0a0618554d8!2m2!1d-81.339755!2d41.14293!2m1!5e0!3e3") Bus Route to the Rec Center (Showers)
+					a(href="https://www.google.com/maps/dir/Rockwell+Hall,+515+Hilltop+Dr,+Kent,+OH+44240/Schwartz+Center,+East+Summit+Street,+Kent,+OH/@41.1502197,-81.3514,17z/data=!3m1!4b1!4m16!4m15!1m5!1m1!1s0x8831252894285db1:0xa6a329176edb2c08!2m2!1d-81.3499335!2d41.152762!1m5!1m1!1s0x8831252e371d8a73:0xe816ae08cd82a8e6!2m2!1d-81.3479638!2d41.1468776!2m1!5e0!3e3") Bus Route to SPARK Innovation Studio
+					a(href="http://www.spotparta.com/") Find a different route
+				.half-col
+
 
 
 	
