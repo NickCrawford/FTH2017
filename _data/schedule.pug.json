@@ -135,6 +135,12 @@
 				"time" : "3 pm"
 			},
 			{
+				"name" : "Build a Portfolio Website Workshop",
+				"description" : "Learn some basic web design to help get your creative portfolio off the ground",
+				"location" : "Room 128",
+				"time" : "4 pm"
+			},
+			{
 				"name" : "Ice Skating",
 				"description" : "Take a break from hacking and enjoy some ice skating courtesy of the Kent State Ice Arena.",
 				"location" : "Kent State Ice Arena",
