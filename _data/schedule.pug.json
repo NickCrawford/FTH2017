@@ -75,10 +75,22 @@
 				"time" : "9 am"
 			},
 			{
-				"name" : "3D Printing Available",
-				"description" : "Hop on a bus to SPARK for 3D printing all day!",
+				"name" : "3D printing Available",
+				"description" : "",
+				"location" : "1st Floor Fashion Library",
+				"time" : "9 am - 11 pm"
+			},
+			{
+				"name" : "SPARK Innovation Studio Open",
+				"description" : "3D printing, vinyl cutter, laser cutter, CNC router",
 				"location" : "SPARK Innovation Studio",
-				"time" : "11 am - 10 pm"
+				"time" : "10 am - 7 pm"
+			},
+			{
+				"name" : "High School Coding Workshop",
+				"description" : "powered by Hacksu, LaunchNET and KSU Ed-Tech",
+				"location" : "Room 128",
+				"time" : "10 am - Noon"
 			},
 			{
 				"name" : "Moving Forward with Your Hack Workshop",
@@ -103,12 +115,6 @@
 				"description" : "",
 				"location" : "Room 324",
 				"time" : "11:30 am"
-			},
-			{
-				"name" : "High School Coding Workshop",
-				"description" : "powered by Hacksu, LaunchNET and KSU Ed-Tech",
-				"location" : "Room 128",
-				"time" : "10 am - Noon"
 			},
 			{
 				"name" : "Lunch",
