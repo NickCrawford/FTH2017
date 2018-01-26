@@ -7,12 +7,7 @@
 				"name" : "Check in Starts",
 				"location" : "Rockwell Hall Atrium",
 				"time" : "5 pm"
-			}, 
-			{
-				"name" : "Tech Materials Preview",
-				"location" : "TechStyleLAB, Room 302",
-				"time" : "5 pm"
-			}, 
+			},
 			{
 				"name" : "Opening Ceremonies",
 				"location" : "2nd Floor Auditorium, Rockwell Hall",
@@ -21,10 +16,12 @@
 			{
 				"name" : "Team Building / Idea Generation Event",
 				"location" : "2nd Floor Auditorium, Rockwell Hall",
-				"time" : "7:00 pm"
+				"time" : "7 pm"
 			},
 			{
-				"description" : "Speakers:"
+				"name" : "Tech Materials Preview",
+				"location" : "TechStyleLAB, Room 302",
+				"time" : "7 pm"
 			},
 			{
 				"name" : "Dinner",
@@ -38,8 +35,25 @@
 				"time" : "8 pm"
 			},
 			{
-				"name" : "Snack",
-				"description" : "Hummus and pita from Main Street Contintental Grill",
+				"name" : "Tech Materials Checkout",
+				"description" : "",
+				"time" : "9 pm"
+			},
+			{
+				"name" : "Speed Problem Solving Workshop",
+				"description" : "Hit a roadblock? Need help getting your project off the ground? Come to this workshop to get the help you need!",
+				"location" : "Room 128",
+				"time" : "10 pm"
+			},
+			{
+				"name" : "Swag Giveaway #1",
+				"description" : "",
+				"location" : "1st Floor Atrium, Rockwell Hall",
+				"time" : "11 pm"
+			},
+			{
+				"name" : "Ice Cream Sundae Bar",
+				"description" : "powered by HacKSU",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
 				"time" : "Midnight"
 			}
@@ -55,23 +69,77 @@
 				"time" : "8 am"
 			}, 
 			{
-				"name" : "High School Coding Workshop",
-				"description" : "",
-				"location" : "Room 128",
-				"time" : "10 am"
+				"name" : "Yoga",
+				"description" : "Bring your own mat",
+				"location" : "2nd Floor Atrium, Rockwell Hall",
+				"time" : "9 am"
 			},
 			{
-				"name" : "Yoga",
+				"name" : "3D Printing Available",
+				"description" : "Hop on a bus to SPARK for 3D printing all day!",
+				"location" : "SPARK Innovation Studio",
+				"time" : "11 am - 10 pm"
+			},
+			{
+				"name" : "Moving Forward with Your Hack Workshop",
+				"description" : "Learn the steps to continue your project after this weekend.",
+				"location" : "1st Floor Atrium",
+				"time" : "10:30 am"
+			},
+			{
+				"name" : "Drop-In Legal Advice (Protect Your Hack)",
+				"description" : "Courtesy of Case Western IPVC",
+				"location" : "1st Floor Atrium",
+				"time" : "11 am - 1 pm"
+			},
+			{
+				"name" : "Intro to Pattern Making Worshop",
 				"description" : "",
-				"location" : "2nd Floor Atrium, Rockwell Hall",
-				"time" : "10 am"
-			}, 
+				"location" : "Room 324",
+				"time" : "11 am"
+			},
+			{
+				"name" : "Intro to Sewing Workshop",
+				"description" : "",
+				"location" : "Room 324",
+				"time" : "11:30 am"
+			},
+			{
+				"name" : "High School Coding Workshop",
+				"description" : "powered by Hacksu, LaunchNET and KSU Ed-Tech",
+				"location" : "Room 128",
+				"time" : "10 am - Noon"
+			},
 			{
 				"name" : "Lunch",
-				"description" : "Sandwiches from Jimmy Johns and vegetarian chili from Main Street Contintental Grill",
+				"description" : "Build your own sandwiches + Vegan Chili",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
 				"time" : "12:30 pm"
-			}, 
+			},
+			{
+				"name" : "Adobe Illustrator/Design Workshop",
+				"description" : "",
+				"location" : "Room 128",
+				"time" : "1:30 pm"
+			},
+			{
+				"name" : "Swag Giveaway #2",
+				"description" : "",
+				"location" : "1st Floor Atrium, Rockwell Hall",
+				"time" : "2:00 pm"
+			},
+			{
+				"name" : "3D Printing Workshop",
+				"description" : "Hop on a bus to SPARK for 3D printing and a special giveaway!",
+				"location" : "SPARK Innovation Studio",
+				"time" : "3 pm"
+			},
+			{
+				"name" : "Ice Skating",
+				"description" : "Take a break from hacking and enjoy some ice skating courtesy of the Kent State Ice Arena.",
+				"location" : "Kent State Ice Arena",
+				"time" : "5 - 6:30 pm"
+			},
 			{
 				"name" : "Dinner",
 				"description" : "Pasta with marinara sauce and meatballs from Belleria",
@@ -85,11 +153,10 @@
 				"time" : "10 pm"
 			},
 			{
-				"name" : "Ice Cream Sundae Bar",
-				"description" : "powered by HacKSU",
+				"name" : "Snack",
+				"description" : "Hummus & Pita + Cookies",
 				"location" : "2nd Floor Atrium, Rockwell Hall",
 				"time" : "Midnight"
-
 			}
 		]},
 
@@ -97,14 +164,8 @@
 			"name": "Sunday",
 			"events" : [
 			{
-				"name" : "Breakfast",
-				"description" : "Tree City Coffee & Pastry Catering",
-				"location" : "2nd Floor Atrium",
-				"time" : "8 am"
-			}, 
-			{
 				"name" : "Project Submission Deadline",
-				"description" : "",
+				"description" : "Submit to DevPost",
 				"location" : "Fashion School Library, Rockwell Hall",
 				"time" : "7 am"
 			}, 
@@ -112,6 +173,12 @@
 				"name" : "Hacking Ends and Expo Setup",
 				"description" : "",
 				"location" : "1st Floor Lobby, Center for Architecture and Environmental Design",
+				"time" : "8 am"
+			},
+			{
+				"name" : "Breakfast",
+				"description" : "Tree City Coffee & Pastry Catering",
+				"location" : "Center for Architecture and Environmental Design Atrium",
 				"time" : "8 am"
 			},
 			{
